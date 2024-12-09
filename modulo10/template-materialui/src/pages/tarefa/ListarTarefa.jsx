@@ -87,21 +87,22 @@ const ListarTarefa = () => {
         <CardHeader
           title="Tarefas"
           subheader="Listagem de Tarefas"
+       
         /> 
-        <CardContent>
+        <CardContent >
             <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+            <Table sx={{ minWidth: 650, background: "black" }} size="small" aria-label="a dense table">
                 <TableHead>
                 <TableRow>
-                    <TableCell>#</TableCell>
-                    <TableCell>Título</TableCell>
-                    <TableCell align="right">Descrição</TableCell>
-                    <TableCell align="right">Data de Início</TableCell>
-                    <TableCell align="right">Data de Finalização</TableCell>
-                    <TableCell align="right">Status</TableCell>
-                    <TableCell align="right">Recurso</TableCell>
-                    <TableCell align="left"></TableCell>
-                    <TableCell align="left"></TableCell>
+                    <TableCell sx={{color:"white"}}>#</TableCell>
+                    <TableCell sx={{color:"white"}}>Título</TableCell>
+                    <TableCell sx={{color:"white"}} align="right">Descrição</TableCell>
+                    <TableCell sx={{color:"white"}} align="right">Data de Início</TableCell>
+                    <TableCell sx={{color:"white"}} align="right">Data de Finalização</TableCell>
+                    <TableCell sx={{color:"white"}} align="right">Status</TableCell>
+                    <TableCell sx={{color:"white"}} align="right">Recurso</TableCell>
+                    <TableCell sx={{color:"white"}} align="left"></TableCell>
+                    <TableCell sx={{color:"white"}} align="left"></TableCell>
                 </TableRow>
                 </TableHead>
                 <TableBody>
@@ -110,18 +111,18 @@ const ListarTarefa = () => {
                     key={indice}
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
-                      <TableCell component="th" scope="row">
+                      <TableCell sx={{color:"white"}} component="th" scope="row">
                           {row.idTarefa}
                       </TableCell>
-                      <TableCell component="th" scope="row">
+                      <TableCell sx={{color:"white"}} component="th" scope="row">
                           {row.tituloTarefa}
                       </TableCell>
-                      <TableCell align="right">{row.descricaoTarefa}</TableCell>
-                      <TableCell align="right">{row.inicioTarefa}</TableCell>
-                      <TableCell align="right">{row.fimTarefa}</TableCell>
-                      <TableCell align="right">{row.statusTarefa}</TableCell>
-                      <TableCell align="right">{row.recursoTarefa}</TableCell>
-                      <TableCell align="center">
+                      <TableCell sx={{color:"white"}} align="right">{row.descricaoTarefa}</TableCell>
+                      <TableCell sx={{color:"white"}} align="right">{row.inicioTarefa}</TableCell>
+                      <TableCell sx={{color:"white"}} align="right">{row.fimTarefa}</TableCell>
+                      <TableCell sx={{color:"white"}} align="right">{row.statusTarefa}</TableCell>
+                      <TableCell sx={{color:"white"}} align="right">{row.recursoTarefa}</TableCell>
+                      <TableCell sx={{color:"white"}} align="center">
                         <Button variant="contained" color="success" onClick={() => handleEditar(row.idTarefa)}><EditIcon fontSize="small" /></Button>            
                       </TableCell>
                       <TableCell align="center">
